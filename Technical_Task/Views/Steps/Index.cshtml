@@ -1,0 +1,114 @@
+﻿@model Technical_Task.ViewModels.Step1_2ViewModel
+
+<div class="container mb-2 border">
+    <h1 class="text-center text-decoration-underline mb-3">Technical Task</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="CommonSpan">Step1</h5>
+            <div>
+                <div class="row">
+                    <div class="col-md-3">
+                       
+                    </div>
+                    <div class="col-md-4">
+                        <span class="form-control centered-span">Row Counter</span>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control Inputcss" value="@Model.Step1List.Count" readonly />
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                    <button class="btn-success" onclick="addStep1Row()">Add TextBox</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div class="form-group row my-3">
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <input type="checkbox" class="form-check-input" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-control inputforlargetext" contenteditable="false">Select All</div>
+                        </div>
+                    </div>
+                    @foreach (var item in Model.Step1List)
+                    {
+                        <div class="form-group row my-3">
+                            <div class="col-md-4 d-flex justify-content-end">
+                                <input type="checkbox" id="step1-input-@item.Step1Id" value="@item.Step1Value" checked="@item.IsChecked" class="form-check-input step1-checkbox" />
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" id="step1-input-@item.Step1Id" value="@item.Step1Value" class="form-control Inputcss step1-input" />
+                            </div>
+                            
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <span class="form-control centered-span">Output:</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-control inputforlargetext" id="ViewStep1ValuSum" contenteditable="false"></div>
+
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5 class="CommonSpan">Step2</h5>
+            <div>
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-4">
+                        <span class="form-control centered-span">Row Counter</span>
+                    </div>
+                    <div class="col-md-5">
+                        <input class="form-control Inputcss" value="@Model.Step2List.Count" readonly />
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                    <button class="btn-success" onclick="addStep2Row()">Add TextBox</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div class="form-group row my-3">
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <input type="checkbox" class="form-check-input" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-control inputforlargetext" contenteditable="false">Select All</div>
+                        </div>
+                    </div>
+                    @foreach (var item in Model.Step2List)
+                    {
+                        <div class="form-group row my-3">
+                            <div class="col-md-4 d-flex justify-content-end">
+                                <input type="checkbox" id="step2-input-@item.Step2Id" name="@item.Index" value="@item.Step2Value" checked="@item.IsChecked" class="form-check-input step2-checkbox" />
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" id="step2-input-@item.Step2Id" value="@item.Step2Value" class="form-control Inputcss step2-input" />
+                            </div>
+                            
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <span class="form-control centered-span">Output:</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-control inputforlargetext" id="ViewStep2ValuSum" contenteditable="false"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

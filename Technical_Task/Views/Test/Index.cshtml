@@ -1,0 +1,78 @@
+﻿@model Technical_Task.ViewModels.Step1_2ViewModel
+
+
+<div class="container">
+    <h1 class="text-center text-decoration-underline mb-3">Technical Task</h1>
+    <div class="row mb-2 border">
+        <div class="col-md-6">
+            <h5 class="CommonSpan">Step1</h5>
+
+            <div class="col-md-8 divForm">
+                <div id="form">
+                    <label class="form-label LabelCss">No of TextBox</label>
+                    <input class="form-control Inputcss" id="row-count1" type="text" readonly />
+                </div>
+                <button class="btn-success buttonCss" id="ButtonStep1">Add Textbox</button>
+            </div>
+            <div class="col-md-8 divForm">
+                <div class="text-md-end checkboxInpurCSS">
+                    <table class="mt-3" id="dynamic-table1">
+                        <tr class="trCSS">
+                            <th style="margin-right:10px;">
+                                <input type="checkbox" class="form-check-input" name="Step1CheckBoxSelectAll" id="Step1CheckBoxSelectAll" />
+                            </th>
+                            <th>Select All</th>
+                        </tr>
+                       
+                        <!-- New rows will be added here -->
+                    </table>
+
+                    <table>
+                        <tr class="trCSS">
+                            <td><strong>Output:</strong></td>
+                            <td  id="output1"></td>
+                        </tr>
+                    </table>
+
+                  
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <h5 class="CommonSpan">Step2</h5>
+
+            <div class="col-md-8 divForm">
+                <div id="form">
+                    <label class="form-label LabelCss">No of TextBox</label>
+                    <input class="form-control Inputcss" id="row-count2" type="text" readonly />
+                </div>
+                <button class="btn-success buttonCss" id="ButtonStep2">Add Textbox</button>
+            </div>
+            <div class="col-md-8 divForm">
+                <div class="text-md-end checkboxInpurCSS">
+                    <table class="mt-3" id="dynamic-table2">
+                        <tr class="trCSS">
+                            <th style="margin-right:10px;">
+                                <input type="checkbox" class="form-check-input" name="Step2CheckBoxSelectAll" id="Step2CheckBoxSelectAll" />
+                            </th>
+                            <th>Select All</th>
+                        </tr>
+
+                        <!-- New rows will be added here -->
+                    </table>
+
+                    <table>
+                        <tr class="trCSS">
+                            <td><strong>Output:</strong></td>
+                            <td id="output2"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
